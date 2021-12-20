@@ -249,6 +249,16 @@
     <!-- contact -->
     <section class="contact center" id="Contact">
       <h3 data-aos="zoom-out-down" data-aos-duration="500">Contact</h3>
+      <div class="alert">
+        <div class="alert-body center">
+          <p>Terima kasih! Pesan anda sudah terkirim.</p>
+        </div>
+      </div>
+      <div class="loading">
+        <div class="loading-body center">
+          <p>Memuat...</p>
+        </div>
+      </div>
       <form
         name="web-portfolio"
         data-aos="flip-down"
@@ -286,12 +296,17 @@
       const scriptURL =
         "https://script.google.com/macros/s/AKfycbzoVFlSIH11KA4P1mQ2kqJwmwSrlQYRdSROtmcgFAD5FYmKFZeNvTbzrH7qGNMBXbfb/exec";
       const form = document.forms["web-portfolio"];
+      const myAlert = document.querySelector(".alert");
+      const myLoading = document.querySelector(".loading");
 
       form.addEventListener("submit", (e) => {
         e.preventDefault();
 
+        myLoading.classList.toggle("loading");
         fetch(scriptURL, { method: "POST", body: new FormData(form) })
           .then((response) => {
+            myLoading.classList.toggle("loading");
+            myAlert.classList.toggle("alert");
             form.reset();
             console.log("Success!", response);
           })
