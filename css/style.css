@@ -534,7 +534,7 @@ body {
 .contact form button {
   background: none;
   color: var(--sec-font-color);
-  border: 1px solid var(--main-color);
+  border: 1px solid #1a1c20;
   cursor: pointer;
   height: 40px;
   font-size: 1em;
