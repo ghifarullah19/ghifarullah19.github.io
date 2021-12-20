@@ -405,23 +405,35 @@ body {
   position: relative;
 }
 .projects .right_box a::before {
-  content: "\f0a9";
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  font-family: "Font Awesome 5 Free";
-  font-weight: 700;
   background: var(--main-color);
   display: flex;
-  justify-content: center;
+  clip-path: circle(0% at 50% 50%);
+  transition: 0.4s;
+}
+.projects .right_box a::after {
+  content: "\f0a9";
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 700;
+  display: flex;
+  justify-content: end;
   align-items: center;
   font-size: 2em;
   clip-path: circle(0% at 50% 50%);
   transition: 0.4s;
 }
-.projects .right_box a:hover::before {
+.projects .right_box a:hover::before,
+.projects .right_box a:hover::after {
   clip-path: circle(100% at 50% 50%);
 }
 .projects .right_box a div {
