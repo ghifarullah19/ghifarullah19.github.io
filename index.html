@@ -256,9 +256,9 @@
         data-aos-duration="500"
       >
         <div>Nama</div>
-        <input type="name" name="nama" class="name"/>
+        <input type="name" name="nama" class="name" />
         <div>Email</div>
-        <input type="email" name="email" class="email"/>
+        <input type="email" name="email" class="email" />
         <div>Pesan</div>
         <textarea name="pesan" id="" cols="30" rows="10"></textarea>
         <button type="submit" class="btn-submit">SUBMIT</button>
@@ -286,15 +286,10 @@
       const scriptURL =
         "https://script.google.com/macros/s/AKfycbzoVFlSIH11KA4P1mQ2kqJwmwSrlQYRdSROtmcgFAD5FYmKFZeNvTbzrH7qGNMBXbfb/exec";
       const form = document.forms["web-portfolio"];
-      const btnSubmit = document.querySelector(".btn-submit");
-      const name = document.querySelector(".name");
-      const email = document.querySelector(".email");
 
       form.addEventListener("submit", (e) => {
         e.preventDefault();
-        // ketika tombol submit diklik
-        // hilangkan isi nama, email, pesan
-        btnSubmit.classList.toggle('d-none');
+
         fetch(scriptURL, { method: "POST", body: new FormData(form) })
           .then((response) => console.log("Success!", response))
           .catch((error) => console.error("Error!", error.message));
