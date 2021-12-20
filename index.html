@@ -261,7 +261,7 @@
         <input type="email" name="email" />
         <div>Pesan</div>
         <textarea name="pesan" id="" cols="30" rows="10"></textarea>
-        <button type="submit" class="btn">SUBMIT</button>
+        <button type="submit" class="btn-submit">SUBMIT</button>
       </form>
     </section>
     <!-- akhir contact -->
@@ -286,6 +286,7 @@
       const scriptURL =
         "https://script.google.com/macros/s/AKfycbzoVFlSIH11KA4P1mQ2kqJwmwSrlQYRdSROtmcgFAD5FYmKFZeNvTbzrH7qGNMBXbfb/exec";
       const form = document.forms["web-portfolio"];
+      const btnSubmit = document.querySelector('.btn');
 
       form.addEventListener("submit", (e) => {
         e.preventDefault();

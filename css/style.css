@@ -531,10 +531,10 @@ body {
   resize: none;
   height: 80px;
 }
-.contact form button {
+.contact .btn-submit form {
   background: none;
   color: var(--sec-font-color);
-  border: 1px solid #1a1c20;
+  border: 1px solid var(--main-color);
   cursor: pointer;
   height: 40px;
   font-size: 1em;
