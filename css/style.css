@@ -837,22 +837,27 @@ body {
   }
 
   .contact .alert-body {
-    width: 90vw;
+    width: 100vw;
   }
+
+  .contact .alert-body p {
+    font-size: 1.2em;
+  }
+
   .contact .loading-body {
-    width: 90vw;
+    width: 100vw;
   }
 
   .contact form input {
-    width: 90vw;
+    width: 100vw;
   }
 
   .contact form textarea {
-    width: 90vw;
+    width: 100vw;
     resize: none;
     height: 80px;
   }
   .contact form .btn-submit {
-    width: 90vw;
+    width: 100vw;
   }
 }
