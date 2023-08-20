@@ -570,7 +570,7 @@ body {
   resize: none;
   height: 80px;
 }
-.contact .btn-submit form {
+.contact form .btn-submit {
   background: none;
   color: var(--sec-font-color);
   border: 1px solid var(--main-color);
@@ -598,7 +598,7 @@ body {
 }
 /* akhir logo */
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 1080px) {
   .main {
     padding-top: 50px;
     height: 100%;
@@ -778,5 +778,39 @@ body {
 
   .projects .heading {
     font-size: 2em;
+  }
+
+  .contact {
+    width: 100%;
+  }
+  .contact h3 {
+    font-size: 1.5em;
+    margin-top: 100px;
+    margin-bottom: 0.5em;
+  }
+
+  .contact div {
+    font-size: 0.8em;
+    margin-left: 20px;
+  }
+
+  .contact .alert-body {
+    width: 90vw;
+  }
+  .contact .loading-body {
+    width: 90vw;
+  }
+
+  .contact form input {
+    width: 90vw;
+  }
+
+  .contact form textarea {
+    width: 90vw;
+    resize: none;
+    height: 80px;
+  }
+  .contact form .btn-submit {
+    width: 90vw;
   }
 }
