@@ -67,6 +67,14 @@ body {
   position: relative;
 }
 
+.main img {
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .box {
   width: 50%;
   margin: 0 auto;
@@ -124,9 +132,10 @@ body {
 .about {
   width: 100%;
   padding: 8em 0;
-  justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   flex-wrap: wrap;
-  align-items: start;
   position: relative;
 }
 .about::before,
@@ -152,14 +161,20 @@ body {
   z-index: -11;
 }
 .about .box_wrap {
-  width: 38%;
-  margin: 8px 80px;
+  margin: 8px 0;
 }
+
+.about .box_wrap .box-wrap-about {
+  width: 80%;
+  margin-bottom: 10px;
+}
+
 .about .box_wrap .heading {
   font-size: 3em;
   margin-bottom: 0.5em;
   position: relative;
 }
+
 .about .box_wrap .heading::before {
   content: "";
   position: absolute;
@@ -600,35 +615,58 @@ body {
 
 @media only screen and (max-width: 1080px) {
   .main {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
     padding-top: 50px;
     height: 100%;
-  }
-  .box h1 {
-    font-size: 1.5em;
-  }
-  .box p {
-    font-size: 0.8em;
-  }
-  .box .btn {
-    font-size: 0.8em;
+    width: 100vw;
   }
 
-  .about {
-    height: 100%;
-    padding-right: 0;
-    padding-left: 0;
+  .main .box h1 {
+    text-align: center;
+    font-size: 2em;
+  }
+
+  .main .box img {
+    width: 106%;
+    height: 106%;
+    object-fit: cover;
+  }
+
+  .box p {
+    text-align: center;
+    font-size: 1em;
+  }
+
+  .box .btn {
+    width: 100%;
+    font-size: 0.8em;
   }
 
   .about .box_wrap {
-    width: 100%;
+    width: 90vw;
   }
+
+  .about .box_wrap .box-wrap-about {
+    padding-left: 10px;
+    width: 85vw;
+  }
+
+  .about .box_wrap .box-wrap-skills {
+    padding-left: 10px;
+  }
+
   .about .box_wrap .heading {
     font-size: 1.5em;
     position: relative;
   }
+
   .about .box_wrap .heading::before {
     bottom: 3px;
   }
+
   .about .box_wrap .text {
     font-size: 1em;
   }
@@ -640,7 +678,8 @@ body {
   }
 
   .education {
-    height: 80%;
+    height: 100%;
+    width: 100vw;
   }
 
   .education .left_box {
@@ -657,24 +696,27 @@ body {
     font-size: 1em;
   }
   .education .right_box {
-    position: relative;
+    margin-top: 130px;
     width: 50%;
   }
+
   .education .right_box img {
-    width: 100%;
-    position: absolute;
-    top: 100px;
+    width: 120%;
+    height: 120%;
+    object-fit: cover;
   }
 
   .experience {
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 90vw;
   }
 
   .experience .right_box {
+    padding-left: 10px;
     margin-top: 10px;
-    width: 100%;
+    width: 95%;
   }
 
   .experience .right_box ul {
@@ -701,13 +743,14 @@ body {
     background: #1a1c20;
   }
   .experience .left_box {
+    padding-left: 10px;
     margin-top: 150px;
     width: 80%;
   }
   .experience h3 {
     font-size: 2em;
   }
-  .experience :is(p) {
+  .experience p {
     font-size: 1em;
     color: var(--sec-font-color);
   }
@@ -718,12 +761,13 @@ body {
   .projects {
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 90vw;
     height: 100%;
   }
 
   .projects .right_box {
-    padding-left: 15px;
+    width: 95%;
+    padding-left: 10px;
     margin-top: 10px;
   }
 
@@ -741,7 +785,6 @@ body {
   .projects .left_box {
     margin-top: 150px;
     width: 90vw;
-    /* margin-left: 30px; */
   }
 
   .projects .left_box p {
@@ -761,7 +804,6 @@ body {
 
   .projects .left_box .project-title {
     font-size: 0.8em;
-    display: block;
     position: relative;
   }
 
@@ -772,7 +814,7 @@ body {
     height: 40%;
     background: none;
     border: 1px solid var(--main-color);
-    left: -20px;
+    left: -15px;
     z-index: 1;
   }
 
