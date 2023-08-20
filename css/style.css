@@ -846,19 +846,19 @@ body {
   }
 
   .contact .loading-body {
-    width: 100vw;
+    width: 95vw;
   }
 
   .contact form input {
-    width: 100vw;
+    width: 95vw;
   }
 
   .contact form textarea {
-    width: 100vw;
+    width: 95vw;
     resize: none;
     height: 80px;
   }
   .contact form .btn-submit {
-    width: 100vw;
+    width: 95vw;
   }
 }
