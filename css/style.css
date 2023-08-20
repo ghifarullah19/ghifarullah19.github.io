@@ -66,6 +66,15 @@ body {
   align-items: center;
   position: relative;
 }
+
+.box {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
 .main::before,
 .main::after {
   content: "";
@@ -108,12 +117,6 @@ body {
 .box .btn:hover {
   background: var(--main-color);
   transition: 0.4s;
-}
-.main img {
-  width: 28em;
-  position: absolute;
-  right: 40px;
-  z-index: -1;
 }
 /* akhir main */
 
@@ -183,12 +186,22 @@ body {
 .education {
   width: 100%;
   padding: 5em 0;
-  justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   position: relative;
   margin-top: -50px;
   margin-bottom: -200px;
 }
+
+.education .education-content {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: start;
+  position: relative;
+}
+
 .education::before,
 .education::after {
   content: "";
@@ -212,6 +225,7 @@ body {
 }
 .education .left_box {
   width: 20%;
+  margin-top: 50px;
 }
 .education .left_box .container {
   margin: 2em 0;
@@ -243,7 +257,8 @@ body {
 }
 .education .right_box img {
   width: 100%;
-  margin-top: 100px;
+  object-fit: cover;
+  margin-top: 50px;
 }
 
 /* experience */
@@ -282,23 +297,19 @@ body {
 .experience .right_box {
   margin-top: 150px;
   width: 100%;
-  /* height: 50%; */
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: column;
 }
-.experience .right_box .container {
-  float: right;
+
+.experience .right_box ul {
   width: 100%;
-}
-.experience .right_box .container {
   list-style: none;
   color: white;
-  margin: 1em 0.8em 0 0;
   position: relative;
 }
-.experience .right_box .container li {
+.experience .right_box ul li {
   padding: 1.5em 1em 0 1em;
   margin-bottom: 1em;
   margin-left: 1em;
@@ -324,15 +335,13 @@ body {
 }
 .experience .left_box {
   margin-top: 80px;
-  width: 30%;
+  width: 20%;
   margin-left: 30px;
 }
-.experience .left_box .container {
-  margin: 2em 0;
+.experience .left_box p {
   position: relative;
-  float: left;
 }
-.experience .left_box .container::before {
+.experience .left_box p::before {
   content: "";
   position: absolute;
   width: 8px;
@@ -445,11 +454,11 @@ body {
   width: 30%;
   margin-left: 30px;
 }
-.projects .left_box .container {
+.projects .left_box p {
   margin: 2em 0;
   position: relative;
 }
-.projects .left_box .container::before {
+.projects .left_box p::before {
   content: "";
   position: absolute;
   width: 8px;
@@ -457,21 +466,7 @@ body {
   background: var(--main-color);
   left: -20px;
 }
-.projects .left_box .cloud {
-  color: white;
-}
-.projects .left_box .cinema {
-  color: aqua;
-}
-.projects .left_box .cross {
-  color: white;
-}
-.projects .left_box .heart {
-  color: red;
-}
-.projects .left_box .tradisi {
-  color: orange;
-}
+
 .projects .heading {
   font-size: 3em;
 }
@@ -602,3 +597,186 @@ body {
   color: var(--sec-font-color);
 }
 /* akhir logo */
+
+@media only screen and (max-width: 600px) {
+  .main {
+    padding-top: 50px;
+    height: 100%;
+  }
+  .box h1 {
+    font-size: 1.5em;
+  }
+  .box p {
+    font-size: 0.8em;
+  }
+  .box .btn {
+    font-size: 0.8em;
+  }
+
+  .about {
+    height: 100%;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .about .box_wrap {
+    width: 100%;
+  }
+  .about .box_wrap .heading {
+    font-size: 1.5em;
+    position: relative;
+  }
+  .about .box_wrap .heading::before {
+    bottom: 3px;
+  }
+  .about .box_wrap .text {
+    font-size: 1em;
+  }
+
+  .skills_box i {
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+    font-size: 2em;
+  }
+
+  .education {
+    height: 80%;
+  }
+
+  .education .left_box {
+    margin-top: 100px;
+    height: 100%;
+    width: 20%;
+  }
+
+  .education .heading {
+    font-size: 2em;
+  }
+  .education :is(h3, small, p) {
+    margin: 0.5em 0;
+    font-size: 1em;
+  }
+  .education .right_box {
+    position: relative;
+    width: 50%;
+  }
+  .education .right_box img {
+    width: 100%;
+    position: absolute;
+    top: 100px;
+  }
+
+  .experience {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .experience .right_box {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .experience .right_box ul {
+    width: 100%;
+    list-style: none;
+    color: white;
+    position: relative;
+  }
+  .experience .right_box ul li {
+    display: block;
+    height: fit-content;
+    position: relative;
+    font-size: small;
+  }
+  .experience .right_box ul li::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 100%;
+    background: none;
+    border: 1px solid var(--main-color);
+  }
+  .experience .right_box ul li::after {
+    background: #1a1c20;
+  }
+  .experience .left_box {
+    margin-top: 150px;
+    width: 80%;
+  }
+  .experience h3 {
+    font-size: 2em;
+  }
+  .experience :is(p) {
+    font-size: 1em;
+    color: var(--sec-font-color);
+  }
+  .experience .right_box .container :is(p, small) {
+    margin-left: 20px;
+  }
+
+  .projects {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100%;
+  }
+
+  .projects .right_box {
+    padding-left: 15px;
+    margin-top: 10px;
+  }
+
+  .projects .right_box a {
+    width: 90vw;
+    font-size: 0.8em;
+  }
+
+  .projects .right_box a::after {
+    left: -5px;
+    font-weight: 600;
+    font-size: 1.5em;
+  }
+
+  .projects .left_box {
+    margin-top: 150px;
+    width: 90vw;
+    /* margin-left: 30px; */
+  }
+
+  .projects .left_box p {
+    font-size: 1em;
+    margin: 2em 0;
+    position: relative;
+  }
+
+  .projects .left_box p::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 100%;
+    background: var(--main-color);
+    left: -20px;
+  }
+
+  .projects .left_box .project-title {
+    font-size: 0.8em;
+    display: block;
+    position: relative;
+  }
+
+  .projects .left_box .project-title::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 40%;
+    background: none;
+    border: 1px solid var(--main-color);
+    left: -20px;
+    z-index: 1;
+  }
+
+  .projects .heading {
+    font-size: 2em;
+  }
+}
