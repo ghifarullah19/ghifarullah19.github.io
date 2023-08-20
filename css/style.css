@@ -42,6 +42,7 @@ body {
   margin-left: 50px;
 }
 .nav ol {
+  display: none;
   list-style: none;
 }
 .nav ol a {
