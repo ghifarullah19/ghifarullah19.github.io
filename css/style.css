@@ -4,6 +4,7 @@
   padding: 0;
   box-shadow: border-box;
   scroll-behavior: smooth;
+  /* overflow-x: hidden; */
 }
 :root {
   --font: "Montserrat", sans-serif;
@@ -14,7 +15,6 @@
   --sec-font-color: #fcf1f1b4;
 }
 body {
-  overflow-x: hidden;
   font-family: var(--font);
   color: var(--main-font-color);
   background-color: var(--bg);
@@ -116,24 +116,24 @@ nav ol li a:hover {
 
 /* main section */
 .main {
-  width: 85%;
+  overflow-x: hidden;
   height: 650px;
   margin: 0 auto;
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
   position: relative;
 }
 
-.main img {
+.main .box img {
   text-align: center;
   margin: 0 auto;
-  width: 100%;
-  height: 100%;
+  width: 400px;
+  height: 400px;
   object-fit: cover;
 }
 
 .box {
-  width: 50%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -152,6 +152,7 @@ nav ol li a:hover {
   border-top: 1px solid var(--main-color);
   z-index: -10;
 }
+
 .main::after {
   background: #151618;
   height: 60%;
@@ -187,7 +188,7 @@ nav ol li a:hover {
 
 /* about */
 .about {
-  width: 100%;
+  overflow-x: hidden;
   padding: 8em 0;
   display: flex;
   flex-direction: column;
@@ -256,7 +257,7 @@ nav ol li a:hover {
 
 /* education */
 .education {
-  width: 100%;
+  overflow-x: hidden;
   padding: 5em 0;
   display: flex;
   flex-direction: column;
@@ -335,9 +336,9 @@ nav ol li a:hover {
 
 /* experience */
 .experience {
+  overflow: hidden;
   margin-bottom: -200px;
   display: flex;
-  width: 100%;
   padding: 2em 0;
   position: relative;
   margin-top: 150px;
@@ -441,8 +442,8 @@ nav ol li a:hover {
 
 /* projects */
 .projects {
+  overflow-x: hidden;
   display: flex;
-  width: 100%;
   padding: 2em 0;
   position: relative;
   margin-top: 150px;
@@ -555,7 +556,7 @@ nav ol li a:hover {
 
 /* contact */
 .contact {
-  width: 100%;
+  overflow-x: hidden;
   padding: 5em 0;
   flex-direction: column;
   position: relative;
@@ -675,6 +676,10 @@ nav ol li a:hover {
     width: 100vw;
   }
 
+  nav .logo {
+    font-size: 1.2em;
+  }
+
   .menu-toggle {
     display: flex;
   }
@@ -689,7 +694,6 @@ nav ol li a:hover {
     justify-content: space-evenly;
     flex-direction: column;
     background-color: #151618;
-    z-index: 2;
     transform: translateX(100%);
     transition: all 1s;
   }
@@ -705,7 +709,7 @@ nav ol li a:hover {
     justify-content: center;
     padding-top: 50px;
     height: 100%;
-    width: 100vw;
+    /* width: 100vw; */
   }
 
   .main .box h1 {
@@ -714,8 +718,8 @@ nav ol li a:hover {
   }
 
   .main .box img {
-    width: 106%;
-    height: 106%;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
   }
 
@@ -763,7 +767,7 @@ nav ol li a:hover {
 
   .education {
     height: 100%;
-    width: 100vw;
+    /* width: 100vw; */
   }
 
   .education .left_box {
@@ -785,8 +789,8 @@ nav ol li a:hover {
   }
 
   .education .right_box img {
-    width: 120%;
-    height: 120%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 
@@ -794,7 +798,7 @@ nav ol li a:hover {
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 90vw;
+    /* width: 90vw; */
   }
 
   .experience .right_box {
@@ -845,7 +849,7 @@ nav ol li a:hover {
   .projects {
     display: flex;
     flex-direction: column;
-    width: 90vw;
+    /* width: 90vw; */
     height: 100%;
   }
 
@@ -907,8 +911,9 @@ nav ol li a:hover {
   }
 
   .contact {
-    width: 100%;
+    box-sizing: border-box;
   }
+
   .contact h3 {
     font-size: 1.5em;
     margin-top: 100px;
