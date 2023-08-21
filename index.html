@@ -28,17 +28,24 @@
   </head>
   <body>
     <!-- navbar -->
-    <header class="nav center">
-      <p class="logo">GHIFARULLAH19</p>
-      <input type="checkbox" class="checkBtn" />
-      <ol class="center">
-        <a href="#About"><li>About</li></a>
-        <a href="#Education"><li>Education</li></a>
-        <a href="#Experience"><li>Experience</li></a>
-        <a href="#Projects"><li>Projects</li></a>
-        <a href="#Contact"><li>Contact</li></a>
+    <nav>
+      <div class="logo">
+        <h4>GHIFARULLAH19</h4>
+      </div>
+      <ol>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Education">Education</a></li>
+        <li><a href="#Experience">Experience</a></li>
+        <li><a href="#Projects">Projects</a></li>
+        <li><a href="#Contact">Contact</a></li>
       </ol>
-    </header>
+      <div class="menu-toggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
     <!-- akhir navbar -->
 
     <!-- main -->
@@ -288,5 +295,16 @@
       });
     </script>
     <!-- akhir google spreadsheet -->
+
+    <!-- Navbar -->
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle input");
+      const nav = document.querySelector("nav ol");
+
+      menuToggle.addEventListener("click", function () {
+        nav.classList.toggle("slide");
+      });
+    </script>
+    <!-- Akhir Navbar -->
   </body>
 </html>

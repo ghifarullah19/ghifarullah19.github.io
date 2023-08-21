@@ -14,11 +14,10 @@
   --sec-font-color: #fcf1f1b4;
 }
 body {
+  overflow-x: hidden;
   font-family: var(--font);
   color: var(--main-font-color);
-  overflow-x: hidden;
   background-color: var(--bg);
-  /* display: flex; */
 }
 .center {
   display: flex;
@@ -27,34 +26,91 @@ body {
 }
 
 /* navbar */
-.nav {
+nav {
+  position: fixed;
+  top: 0;
   width: 100%;
-  height: 80px;
-  margin: 0 auto;
-  justify-content: space-between;
+  display: flex;
   background-color: #151618;
+  justify-content: space-around;
+  height: 60px;
+  align-items: center;
+  z-index: 2;
 }
-.checkBtn {
-  display: none;
-}
-.nav .logo {
-  font-size: 2em;
-  margin-left: 50px;
-}
-.nav ol {
-  display: none;
-  list-style: none;
-}
-.nav ol a {
-  text-decoration: none;
+
+nav .logo {
+  font-size: 1.5em;
   color: var(--sec-font-color);
-  margin: 0.3em;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav ol {
+  display: flex;
+  list-style: none;
+  width: 40%;
+  justify-content: space-between;
+}
+nav ol li a {
+  color: var(--sec-font-color);
+  text-decoration: none;
+  font-size: 1em;
+  /* margin: 0.3em; */
   padding: 0.5em 1.5em;
   border-radius: 10px;
 }
-.nav ol a:hover {
+
+nav ol li a:hover {
   transition: 0.8s;
   background: var(--main-color);
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  opacity: 0;
+  cursor: pointer;
+  left: -5px;
+  top: -3px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: var(--sec-font-color);
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:last-child {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:last-child {
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  transform: scale(0);
 }
 /* akhir navbar */
 
@@ -614,7 +670,30 @@ body {
 }
 /* akhir logo */
 
-@media only screen and (min-width: 320px) and (max-width: 479px) {
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav ol {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 80%;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: #151618;
+    z-index: 2;
+    transform: translateX(100%);
+    transition: all 1s;
+  }
+
+  nav ol.slide {
+    transform: translateX(0%);
+  }
+
   .main {
     display: flex;
     flex-direction: column-reverse;
