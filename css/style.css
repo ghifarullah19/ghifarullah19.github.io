@@ -595,6 +595,7 @@ nav ol li a:hover {
 
   /* Jumbotron */
   .jumbotron {
+    width: 100vw;
     flex-direction: column-reverse;
     margin-top: 60px;
   }
