@@ -735,7 +735,36 @@ nav ol li a:hover {
     align-items: center;
   }
 
+  .contact .loading {
+    display: none;
+  }
+
+  .contact .loading-body {
+    width: 90vw;
+    overflow: hidden;
+  }
+
+  .contact .loading-body p {
+    font-size: 16px;
+    font-weight: 200px;
+  }
+
+  .contact .alert {
+    display: none;
+  }
+
+  .contact .alert-body {
+    width: 90vw;
+    overflow: hidden;
+  }
+
+  .contact .alert-body p {
+    font-size: 14px;
+    font-weight: 200px;
+  }
+
   .contact form {
+    margin-top: 20px;
     max-width: 80%;
   }
 
