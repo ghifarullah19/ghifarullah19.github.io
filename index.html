@@ -2,9 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <!-- link aos -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- akhir link aos -->
@@ -23,21 +21,20 @@
     <!-- link icon website -->
     <link rel="icon" href="img/profile.png" />
     <!-- akhir link icon website -->
-
     <title>Muhammad Lutfi | Portofolio Website</title>
   </head>
   <body>
-    <!-- navbar -->
+    <!-- Navbar -->
     <nav>
       <div class="logo">
         <h4>GHIFARULLAH19</h4>
       </div>
       <ol>
-        <li><a href="#About">About</a></li>
-        <li><a href="#Education">Education</a></li>
-        <li><a href="#Experience">Experience</a></li>
-        <li><a href="#Projects">Projects</a></li>
-        <li><a href="#Contact">Contact</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Education</a></li>
+        <li><a href="#">Experience</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
       </ol>
       <div class="menu-toggle">
         <input type="checkbox" />
@@ -46,37 +43,28 @@
         <span></span>
       </div>
     </nav>
-    <!-- akhir navbar -->
+    <!-- Akhir Navbar -->
 
-    <!-- main -->
-    <section class="main">
-      <div class="box" data-aos="fade-right" data-aos-duration="500">
-        <h1>Muhammad Lutfi</h1>
+    <!-- Jumbotron -->
+    <section class="jumbotron" id="jumbotron" data-aos="fade-up">
+      <div class="left_box">
+        <h2 class="heading">Muhammad Lutfi</h2>
         <p>Back-End Developer</p>
-        <a href="#About">
-          <button class="btn">About</button>
-        </a>
+        <button>About</button>
       </div>
-      <div class="box">
-        <img
-          src="img/1.png"
-          alt=""
-          data-aos="fade-left"
-          data-aos-delay="200"
-          data-aos-duration="500"
-        />
+
+      <div class="right_box">
+        <img src="img/1.png" alt="profile" />
       </div>
     </section>
-    <!-- akhir main -->
+    <!-- Akhir Jumbotron -->
 
-    <!-- about -->
-    <section class="about" id="About">
-      <div class="box_wrap">
-        <div class="box-wrap-about">
-          <h2 class="heading" data-aos="fade-up-right" data-aos-duration="500">
-            About
-          </h2>
-          <p class="text" data-aos="zoom-in-right">
+    <!-- About -->
+    <section class="about" id="about">
+      <div class="left_box" data-aos="fade-right">
+        <h3 class="heading">About</h3>
+        <div class="about-box">
+          <p>
             Halo! Nama saya Muhammad Lutfi dan saya adalah mahasiswa UNPAS
             dengan program studi Teknik Informatika. <br />
             Saya bercita-cita ingin menjadi Back-End Web Developer dan Data
@@ -85,119 +73,108 @@
             game.
           </p>
         </div>
-        <div class="box-wrap-skills">
-          <h2
-            class="heading"
-            data-aos="fade-up-left"
-            data-aos-delay="200"
-            data-aos-duration="500"
-          >
-            Skills
-          </h2>
-          <div
-            class="skills_box"
-            data-aos="zoom-in-left"
-            data-aos-delay="200"
-            data-aos-duration="500"
-          >
-            <i class="fab fa-html5 fa-3x"></i>
-            <i class="fab fa-css3-alt fa-3x"></i>
-            <i class="fas fa-film fa-3x"></i>
-          </div>
+      </div>
+      <div class="right_box" data-aos="fade-left">
+        <h3 class="heading">Skills</h3>
+        <div class="skills-box">
+          <i><img src="img/java.png" alt="" /></i>
+          <i><img src="img/python.png" alt="" /></i>
+          <i><img src="img/c-sharp.png" alt="" /></i>
+          <i><img src="img/c-.png" alt="" /></i>
+          <i><img src="img/html.png" alt="" /></i>
+          <i><img src="img/css-3.png" alt="" /></i>
+          <i><img src="img/video.png" alt="" /></i>
         </div>
       </div>
     </section>
-    <!-- akhir about -->
+    <!-- Akhir About -->
 
-    <!-- education -->
-    <section class="education" id="Education">
-      <div class="education-content">
-        <div class="left_box" data-aos="flip-left" data-aos-duration="500">
-          <h3 class="heading">Education</h3>
-          <div class="container">
-            <h3>Universitas Pasundan</h3>
-            <p>Teknik Informatika</p>
-            <small>October 2021-2024</small>
-          </div>
+    <!-- Education -->
+    <section class="education" id="education" data-aos="fade-up">
+      <h3 class="heading">Education</h3>
+      <p>
+        Berikut adalah riwayat pendidikan saya dari SD sampai dengan Perguruan
+        Tinggi.
+      </p>
+      <div class="container">
+        <div class="education-box">
+          <img src="img/sd.png" alt="" />
+          <h4>SDN Sarijadi Selatan 2</h4>
+          <p>2009 - 2015</p>
         </div>
-        <div
-          class="right_box"
-          data-aos="flip-right"
-          data-aos-delay="200"
-          data-aos-duration="500"
-        >
+        <div class="education-box">
+          <img src="img/smp.png" alt="" />
+          <h4>SMPN 26 Bandung</h4>
+          <p>2015 - 2018</p>
+        </div>
+        <div class="education-box">
+          <img src="img/sma.png" alt="" />
+          <h4>SMA Pasundan 1 Cimahi</h4>
+          <p>2018 - 2021</p>
+        </div>
+        <div class="education-box">
           <img src="img/university.png" alt="" />
+          <h4>Universitas Pasundan</h4>
+          <p>2021 - Sekarang</p>
         </div>
       </div>
     </section>
-    <!-- akhir education -->
+    <!-- Akhir Education -->
 
-    <!-- experience -->
-    <section class="experience" id="Experience">
-      <div class="left_box" data-aos="zoom-in" data-aos-duration="500">
-        <h3 data-aos="zoom-in" data-aos-delay="200" data-aos-duration="500">
-          Experience
-        </h3>
-        <p>
-          Berikut adalah beberapa pengalaman yang saya dapatkan selama
-          bersekolah di SMA Pasundan 1 Cimahi
-        </p>
-      </div>
-      <div class="right_box">
-        <ul>
-          <li
-            data-aos="zoom-in-up"
-            data-aos-delay="200"
-            data-aos-duration="500"
-          >
-            <small>2019 - 2020</small>
-            <p>Ketua OSIS SMA Pasundan 1 Cimahi</p>
-            <p>
-              Ketua Ekstrakurikuler <span class="cloud">Cloud </span>
-              <span class="cinema">Cinema</span>
-            </p>
-          </li>
-          <li
-            data-aos="zoom-in-up"
-            data-aos-delay="400"
-            data-aos-duration="500"
-          >
-            <small>2019 - Saat Ini</small>
-            <p>Filmmaker</p>
-          </li>
-          <li
-            data-aos="zoom-in-up"
-            data-aos-delay="600"
-            data-aos-duration="500"
-          >
-            <small>2021</small>
-            <p>Programmer</p>
-          </li>
-        </ul>
+    <!-- Experience -->
+    <section class="experience" id="#experience" data-aos="fade-up">
+      <h3 class="heading">Experience</h3>
+      <p>
+        Berikut adalah pengalaman saya selama menjadi pelajar dan mahasiswa.
+      </p>
+      <div class="container">
+        <div class="experience-box">
+          <img src="img/osis.jpg" alt="" />
+          <h4>Ketua OSIS SMA Pasundan 1 Cimahi</h4>
+          <p>2019 - 2020</p>
+        </div>
+        <div class="experience-box">
+          <img src="img/cc.jpg" alt="" />
+          <h4>Ketua Ekstrakulikuler Cloud Cinema</h4>
+          <p>2019 - 2020</p>
+        </div>
+        <div class="experience-box">
+          <img src="img/filmmaker.jpg" alt="" />
+          <h4>Filmmaker</h4>
+          <p>2019 - 2020</p>
+        </div>
+        <div class="experience-box">
+          <img src="img/genre.png" alt="" />
+          <h4>Juara 2 Film Pendek: GenRe Kota Cimahi</h4>
+          <p>2019</p>
+        </div>
+        <div class="experience-box">
+          <img src="img/smansa.jpg" alt="" />
+          <h4>Juara 1 Sinematografi: Fedabara</h4>
+          <p>2019</p>
+        </div>
+        <div class="experience-box">
+          <img src="img/hmtif.png" alt="" />
+          <h4>Juara 1 Pemrograman Web: Entertainment</h4>
+          <p>2022</p>
+        </div>
+        <div class="experience-box">
+          <img src="img/tif.jpg" alt="" />
+          <h4>Asisten Dosen: Algoritma & Pemrograman 1</h4>
+          <p>2023 - Sekarang</p>
+        </div>
       </div>
     </section>
-    <!-- akhir experience -->
+    <!-- Akhir Experience -->
 
-    <!-- project -->
-    <section class="projects" id="Projects">
-      <div class="left_box">
-        <h3 data-aos="zoom-in-down" data-aos-duration="500" class="heading">
-          Projects
-        </h3>
-        <p data-aos="zoom-in-up" data-aos-delay="200" data-aos-duration="500">
-          Saya memproduksi dan mendapatkan penghargaan dari project berikut
-          bersama ekskul Cloud Cinema
-        </p>
-        <p class="project-title">
-          Cross Heart sebagai juara kedua di ajang Jambore GenRe Kota Cimahi
-          2019
-        </p>
-        <p class="project-title">
-          Traditional Cimahi Street Food sebagai juara pertama di ajang Fedabara
-          2019
-        </p>
-      </div>
-      <div class="right_box">
+    <!-- Project -->
+    <section class="project" id="project">
+      <h3 class="heading">Projects</h3>
+      <p>
+        Berikut adalah beberapa project yang pernah saya buat selama menjadi
+        pelajar dan mahasiswa.
+      </p>
+      <div class="container">
         <a href="https://www.instagram.com/p/CQ3DNuvHAay/">
           <div data-aos="flip-up" data-aos-delay="200" data-aos-duration="500">
             Cross Heart
@@ -220,51 +197,54 @@
         </a>
         <a href="https://www.instagram.com/p/CHujRoIHg1p/">
           <div data-aos="flip-up" data-aos-delay="1000" data-aos-duration="500">
-            Kampanye Pemilihan Ketua OSIS
+            Kampanye Pemilu Ketua OSIS
           </div>
         </a>
       </div>
     </section>
-    <!-- akhir project -->
+    <!-- Akhir Project -->
 
     <!-- contact -->
-    <section class="contact center" id="Contact">
-      <h3 data-aos="zoom-out-down" data-aos-duration="500">Contact</h3>
-      <div class="alert">
-        <div class="alert-body center">
-          <p>Terima kasih! Pesan anda sudah terkirim.</p>
+    <section class="contact" id="contact">
+      <h3 class="heading" data-aos="zoom-out-down" data-aos-duration="500">
+        Contact
+      </h3>
+      <div class="container">
+        <div class="alert">
+          <div class="alert-body center">
+            <p>Terima kasih! Pesan anda sudah terkirim.</p>
+          </div>
         </div>
-      </div>
-      <div class="loading">
-        <div class="loading-body center">
-          <p>Memuat...</p>
+        <div class="loading">
+          <div class="loading-body center">
+            <p>Memuat...</p>
+          </div>
         </div>
+        <form
+          name="web-portfolio"
+          data-aos="flip-down"
+          data-aos-delay="200"
+          data-aos-duration="500"
+        >
+          <div>Nama</div>
+          <input type="name" name="nama" class="name" />
+          <div>Email</div>
+          <input type="email" name="email" class="email" />
+          <div>Pesan</div>
+          <textarea name="pesan" id="" cols="30" rows="10"></textarea>
+          <button type="submit" class="btn-submit">SUBMIT</button>
+        </form>
       </div>
-      <form
-        name="web-portfolio"
-        data-aos="flip-down"
-        data-aos-delay="200"
-        data-aos-duration="500"
-      >
-        <div>Nama</div>
-        <input type="name" name="nama" class="name" />
-        <div>Email</div>
-        <input type="email" name="email" class="email" />
-        <div>Pesan</div>
-        <textarea name="pesan" id="" cols="30" rows="10"></textarea>
-        <button type="submit" class="btn-submit">SUBMIT</button>
-      </form>
     </section>
     <!-- akhir contact -->
 
-    <!-- logo -->
+    <!-- footer -->
     <footer class="footer center">
       <div class="copyright">
         <a href="https://www.instagram.com/ghifarullah19/">GHIFARULLAH19</a>
       </div>
     </footer>
-    <!-- akhir logo -->
-
+    <!-- Akhir footer -->
     <!-- AOS script -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
